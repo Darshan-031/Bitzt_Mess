@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5001/api",
+  baseURL: import.meta.env.BACKEND_API_BASE_URL || "http://localhost:5001/api",
 });
 
 // Set token for protected routes
