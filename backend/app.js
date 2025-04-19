@@ -17,12 +17,4 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/mess", messRoutes);
 app.use("/api/student", studentRoutes);
 
-
-// Serve static frontend files
-app.use(express.static(path.join(__dirname, "frontend/dist")));
-
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "frontend/dist/index.html"));
-});
-
 export default app;
