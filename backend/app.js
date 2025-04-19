@@ -11,7 +11,7 @@ const app = express();
 
 // ✅ Use CORS with your frontend origin
 app.use(cors({
-  origin: "https://bitzt-mess.vercel.app", // 👈 allow your frontend URL
+  origin: true, // 👈 allow your frontend URL
   credentials: true // optional: use this if you're dealing with cookies/auth
 }));
 

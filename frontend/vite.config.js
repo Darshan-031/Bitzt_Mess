@@ -31,7 +31,6 @@ export default defineConfig({
         ],
       },
       workbox: {
-        navigateFallback: "/offline.html",
         runtimeCaching: [
           {
             urlPattern: ({ request }) => request.mode === "navigate",
