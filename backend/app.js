@@ -9,7 +9,12 @@ import studentRoutes from "./routes/studentRoutes.js";
 
 const app = express();
 
-app.use(cors());
+// ✅ Use CORS with your frontend origin
+app.use(cors({
+  origin: "https://bitzt-mess.vercel.app", // 👈 allow your frontend URL
+  credentials: true // optional: use this if you're dealing with cookies/auth
+}));
+
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
